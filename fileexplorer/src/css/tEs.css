@@ -1,0 +1,202 @@
+.logout {
+    margin-left: 20px;
+    /* 可选，添加左边距 */
+    min-width: 100px;
+    cursor: pointer;
+  }
+  
+  .headBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    background-color: #333;
+    color: white;
+    padding: 0 20px;
+  }
+  
+  .logo-avatar {
+    display: flex;
+    align-items: center;
+  
+  }
+  
+  .logo2 {
+    font-size: 24px;
+    margin-right: 10px;
+    /* 添加间距 */
+    min-width: 150px;
+    /* 设置最小宽度 */
+    color: rgb(3, 174, 189);
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .el-input {
+    flex: 1;
+    /* 让输入框占据剩余空间 */
+    max-width: 90vw;
+    /* 设置最大宽度 */
+  }
+  
+  @media (max-width: 768px) {
+    .navBar {
+      height: 15vh !important;
+  
+    }
+  
+    .logo2 {
+      font-size: 20px;
+      /* 调整字体大小 */
+    }
+  
+    .headBar {
+      flex-direction: column;
+      /* 在较小屏幕上改为垂直布局 */
+      height: auto;
+      /* 自适应高度 */
+      padding: 10px;
+      /* 调整内边距 */
+    }
+  
+    .logo-avatar {
+      margin-bottom: 10px;
+      /* 调整 "笔记管理" 和头像的底部间距 */
+    }
+  
+    .logo-avatar,
+    .logout {
+      display: flex;
+      justify-content: flex-end;
+      /* 保证 "笔记管理" 和 "退出登录" 在同一行 */
+      width: 100%;
+      /* 占满父容器的宽度 */
+  
+    }
+  
+  
+  
+    .el-input {
+      margin-top: 0;
+      /* 移除顶部间距 */
+    }
+  }
+  
+  /* 中等屏幕下的字体调整 */
+  @media (max-width: 768px) {
+    .box {
+      max-width: 45%;
+      max-height: 200px;
+    }
+  
+    .item-title {
+      font-size: 20px !important;
+      /* 中等屏幕的字体 */
+    }
+  
+    .item-description {
+      font-size: 12px !important;
+      /* 中等屏幕的字体 */
+    }
+  }
+  
+  /* 小屏幕下的字体调整 */
+  @media (max-width: 480px) {
+    .box {
+      max-width: 40%;
+      max-height: 200px;
+  
+    }
+  
+    .item-title {
+      font-size: 18px !important;
+      /* 小屏幕的字体 */
+    }
+  
+    .item-description {
+      font-size: 10px !important;
+      /* 小屏幕的字体 */
+    }
+  }
+  
+  /* 非常小的屏幕下的字体调整 */
+  @media (max-width: 300px) {
+    .box {
+      max-width: unset;
+      flex-basis: 90vw;
+      height: 30vh;
+    }
+  
+    .item-title {
+      font-size: 16px;
+      /* 非常小的屏幕的字体 */
+    }
+  
+    .item-description {
+      font-size: 8px;
+      /* 非常小的屏幕的字体 */
+    }
+  }
+  
+  .navBar {
+    bottom: 0;
+    width: 100vw;
+    height: 10vh;
+    background-color: #333;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 修改为最上方 */
+  }
+  
+  .navBar button {
+    width: 10vw;
+    min-width: 100px;
+    height: 6vh;
+    background-color: rgb(3, 174, 189);
+    color: white;
+    font-size: 2.5vh; /* 使用相对单位确保字体大小随按钮变化 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #333;
+    /*width: 100%;*/
+    /*加上溢出 */
+    /* height: 80vh;*/
+    /* 调整高度以适应头部和底部栏 */
+    overflow-y: auto;
+    /* 启用垂直滚动 */
+    padding: 10px;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    align-content: flex-start;
+  }
+  
+  .container::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+  }
